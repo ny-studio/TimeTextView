@@ -43,12 +43,12 @@ public class TimeTextView extends RelativeLayout implements Runnable {
         timeTextView = new TextView(ctx);
         timeTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, textSize);
         timeTextView.setTextColor(textColor);
+        timeTextView.setGravity(Gravity.CENTER);
 
         this.addView(timeTextView, new RelativeLayout.LayoutParams(
-                LayoutParams.WRAP_CONTENT,
+                LayoutParams.MATCH_PARENT,
                 LayoutParams.WRAP_CONTENT
         ));
-
         thread.start();
     }
 
